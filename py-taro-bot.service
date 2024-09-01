@@ -1,0 +1,14 @@
+[Unit]
+Description=py-taro-bot - Telegram Bot
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/py-taro-bot/
+ExecStart=/home/py-taro-bot/env/bin/python /home/py-taro-bot/bot.py
+RestartSec=60
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
