@@ -12,7 +12,6 @@ This application is a rewritten version of [this](https://github.com/pamnard/Tar
 
 ```bash
 cd /home
-git clone https://github.com/Vadimmmz/py-taro-bot.git
 python -m venv env
 
 # Activate virtual environment for Windows
