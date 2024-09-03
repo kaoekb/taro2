@@ -4,10 +4,7 @@ from settings import prompt_1, prompt_2, prompt_3, prompt_final
 
 
 def prediction(layout: list[dict], question: str) -> None:
-    """
-        This function adds prediction from chatGPT into 'prediction' "layout" dict element for each card
-
-    """
+    
 
     messages = []
 
@@ -31,10 +28,7 @@ def prediction(layout: list[dict], question: str) -> None:
 
 
 def openai_handler(client: OpenAI, messages: list[dict], prompt: str) -> str:
-    """
-        Request to ChatGPT
-
-    """
+   
 
     messages.append({"role": "user", "content": prompt})
     completion = client.chat.completions.create(model=os.getenv("OPENAPI_MODEL"),
