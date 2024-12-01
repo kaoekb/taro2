@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  taro_pay:
+    build:
+      context: .
+    env_file:
+      - .env
+    # environment:
+    #   - Token_tg_1=${Token_tg_1}
+    #   - Your_user_ID=${Your_user_ID}
+    #   - db=${db}
+      
+    volumes:
+      - ./logs:/app/logs
+    restart: always
