@@ -1,0 +1,8 @@
+docker logs -f taro2
+
+docker build --no-cache -t taro2 .
+docker run -d --name taro2 --restart=always --env-file .env taro2
+docker run -d --name taro2 --restart=always --env-file .env -v $(pwd)/log:/app/log taro2
+
+
+docker start taro-2-app 
